@@ -237,27 +237,8 @@ XGBoost re-applied independently for:
 - [x] `requirements.txt` — All dependencies pinned
 - [x] `summary.docx` — 2-page executive report (charts embedded, jargon-free)
 - [x] `charts/` — All 11 chart PNGs saved
-- [ ] Google Colab link → *(paste here)*
-- [ ] Live Streamlit app link → *(paste here after deployment)*
+- [ ] Google Colab link → (https://colab.research.google.com/drive/1feBLyMiJYvhZERGIml36RgIriZ5BiCzC?usp=sharing)
+- [ ] Live Streamlit app link → https://kishanend-to-end-sales-forecasting-demand-intelligence-system.streamlit.app/
 
----
 
-## 📝 Known Limitations
 
-1. **Small holdout set** — Model comparison uses only 3 months of holdout data. A single unusual month can shift MAPE by several points. In production, re-evaluate monthly using a rolling window.
-2. **XGBoost recursive forecasting** — Each forecast step feeds its own prediction back in as input (lag features). Errors can compound over longer horizons; Month 3 forecasts should be treated with wider uncertainty than Month 1.
-3. **Supplementary dataset** — `gregorut/videogamesales` is unreachable from sandboxed environments. The notebook uses a synthetic stand-in of identical schema; replace with the real Kaggle download for full compliance.
-4. **No external regressors** — Models don't account for promotions, holidays, or external economic signals. A production system should incorporate these for better accuracy.
-
----
-
-## 👤 Author
-
-**Internship Project — Week 3 & 4**  
-Assigned: 03/07/2026 · Submitted: 13/07/2026
-
----
-
-## 📄 License
-
-This project is submitted as part of an internship programme. Code is available under the [MIT License](LICENSE).
